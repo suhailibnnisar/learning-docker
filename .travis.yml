@@ -1,0 +1,9 @@
+sudo: required
+services:
+  - docker
+
+before_install:
+  - docker build -f Dockerfile.dev -t suhailibnnisar/learning-docker .
+
+script:
+  - docker run suhailibnnisar/learning-docker npm run test:ci
