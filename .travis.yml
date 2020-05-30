@@ -10,13 +10,12 @@ script:
 
 deploy:
   provider: elasticbeanstalk
-  region: ap-south-1
-  name: learning-docker
-  env: LearningDocker-env
-  bucket_name: elasticbeanstalk-ap-south-1-571149291614
-  bucket_path: learning-docker
+  app: "learning-docker"
+  region: "ap-south-1"
+  env: "LearningDocker-env"
+  bucket_name: "elasticbeanstalk-ap-south-1-571149291614"
+  secret_access_key:
+    secure: "$AWS_SECRET_KEY"
+  access_key_id: $AWS_ACCESS_KEY
   on:
     branch: master
-  access_key_id: $AWS_ACCESS_KEY
-  secret_access_key:
-    secure: $AWS_SECRET_KEY
