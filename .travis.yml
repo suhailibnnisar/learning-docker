@@ -7,8 +7,6 @@ before_install:
 
 script:
   - docker run suhailibnnisar/learning-docker npm run test:ci
-  - echo $AWS_ACCESS_KEY
-  - echo $AWS_SECRET_KEY
 
 deploy:
   provider: elasticbeanstalk
@@ -19,6 +17,6 @@ deploy:
   bucket_path: "learning-docker"
   on:
     branch: master
-  access_key_id: $AWS_ACCESS_KEY
+  access_key_id: "AKIAYJ6ZGSBPAE7RL4OO"
   secret_access_key:
-    secure: "$AWS_SECRET_KEY"
+    secure: "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"
